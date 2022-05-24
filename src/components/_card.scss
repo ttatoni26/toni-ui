@@ -1,0 +1,19 @@
+.card {
+  display: block;
+  padding: $base-spacing;
+  border: $base-border-thickness solid $base-border-clr;
+  border-radius: $base-border-radius;
+  max-width: 300px;
+
+  .card-title {
+    font-size: $font-size-lg;
+    font-weight: 700;
+    margin-bottom: $base-spacing;
+  }
+
+  .card-body {
+    font-size: $base-font-size;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}

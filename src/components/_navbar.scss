@@ -1,0 +1,35 @@
+%flex-layout {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav {
+  @extend %flex-layout;
+  min-height: 7vh;
+  border-bottom: $base-border-thickness solid $base-border-clr;
+
+  .logo {
+    font-size: $font-size-lg;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 150ms;
+    }
+  }
+}
+
+@each $key, $val in $colors {
+  .nav-#{$key} {
+    @extend .nav;
+    background-color: $val;
+    border: 0 !important;
+  }
+}
